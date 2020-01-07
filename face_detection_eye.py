@@ -25,7 +25,6 @@ while True:
         gray,
         scaleFactor=1.3,
         minNeighbors=5,
-        minSize=(30, 30)
     )
 
     for (x, y, w, h) in faces:
@@ -37,7 +36,11 @@ while True:
         roi_color = img[y:y + h, x:x + w]
 
         # Detects eyes inside the encapsulating face rectangle
-        eyes = eye_cascade.detectMultiScale(roi_gray)
+        eyes = eye_cascade.detectMultiScale(
+            roi_gray,
+            scaleFactor=1.1,
+            minNeighbors=3
+        )
 
         # Draw rectangle around eyes
         for (ex, ey, ew, eh) in eyes:
