@@ -1,3 +1,4 @@
+
 # Webcam Face Detection
 
-Face detector built with python and OpenCV 4. Capable of detecting faces/eyes in real time, utilizing the webcam.
+Small university project build using Python and OpenCV 4. It can detect faces and eyes given both pictures and live video feed. For more information please check the [documentation](https://github.com/radusocaci/webcam-face-detection/blob/master/Project%20Documentation.pdf).
